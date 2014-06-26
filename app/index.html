@@ -5,7 +5,7 @@
 	<!--headscriptToken-->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Order Cloud</title>
+    <title>City of Bristol College</title>
 	<link rel="stylesheet" href="css/less/bootstrap-451.css" data-group="source" />
 	<link rel="stylesheet" href="css/editor.css" data-group="source" />
 	<link rel="stylesheet" href="css/custom.css" data-group="source" />
@@ -19,18 +19,18 @@
         <login />
     </section>
     <section ng-show="Four51User.isAuthenticated()" id="content">
-        <section class="hidden-print">
+        <!--<section class="hidden-print">
             <navigation />
         </section>
         <section class="hidden-print">
             <branding />
-        </section>
+        </section>-->
         <section class="container-view">
             <ng-view autoscroll />
         </section>
-        <section class="hidden-print">
+        <!--<section class="hidden-print">
             <copyright ng-if="!user.Permissions.contains('UnBrandedSite')" />
-        </section>
+        </section>-->
     </section>
 </section>
 
@@ -90,6 +90,7 @@
 	<script src="js/controllers/relatedProductsCtrl.js" data-group="source"></script>
 	<script src="js/controllers/shortProductViewCtrl.js" data-group="source"></script>
     <script src="js/controllers/securityCtrl.js" data-group="source"></script>
+    <script src="js/controllers/prospectusCtrl.js" data-group="source"></script>
 
     <script src="js/interceptors.js" data-group="source"></script>
     <script src="js/services/errorService.js" data-group="source"></script>
