@@ -2159,8 +2159,8 @@ fieldset[disabled] .btn-success.active {
 }
 .btn-info {
   color: #ffffff;
-  background-color: #5bc0de;
-  border-color: #46b8da;
+  background-color: #38c0ff;
+  border-color: #1fb8ff;
 }
 .btn-info:hover,
 .btn-info:focus,
@@ -2168,8 +2168,8 @@ fieldset[disabled] .btn-success.active {
 .btn-info.active,
 .open .dropdown-toggle.btn-info {
   color: #ffffff;
-  background-color: #39b3d7;
-  border-color: #269abc;
+  background-color: #0fb3ff;
+  border-color: #0099e0;
 }
 .btn-info:active,
 .btn-info.active,
@@ -2191,11 +2191,11 @@ fieldset[disabled] .btn-info:active,
 .btn-info.disabled.active,
 .btn-info[disabled].active,
 fieldset[disabled] .btn-info.active {
-  background-color: #5bc0de;
-  border-color: #46b8da;
+  background-color: #38c0ff;
+  border-color: #1fb8ff;
 }
 .btn-info .badge {
-  color: #5bc0de;
+  color: #38c0ff;
   background-color: #ffffff;
 }
 .btn-warning {
@@ -4361,11 +4361,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: #449d44;
 }
 .label-info {
-  background-color: #5bc0de;
+  background-color: #38c0ff;
 }
 .label-info[href]:hover,
 .label-info[href]:focus {
-  background-color: #31b0d5;
+  background-color: #05b0ff;
 }
 .label-warning {
   background-color: #f0ad4e;
@@ -4612,7 +4612,7 @@ a.thumbnail.active {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .progress-bar-info {
-  background-color: #5bc0de;
+  background-color: #38c0ff;
 }
 .progress-striped .progress-bar-info {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -7012,7 +7012,7 @@ select.ng-invalid:invalid:invalid:focus {
 }
 .jumbotron.blue {
   color: #333;
-  background-color: #5bc0de;
+  background-color: #38c0ff;
 }
 .jumbotron.yellow {
   color: #333;
@@ -10014,4 +10014,27 @@ table[datepicker] {
 }
 .fa-bomb:before {
   content: "\f1e2";
+}
+input:not([type="checkbox"]),
+textarea,
+select,
+button {
+  min-height: 0px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.prospectus-well {
+  background: rgba(0, 0, 0, 0.8);
+  color: #FFFFFF;
+  border: none;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+i.fa-question-circle {
+  cursor: help;
+  color: #38c0ff;
 }

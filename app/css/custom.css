@@ -4,20 +4,17 @@ Theme name: My SPA Theme
 Version: 1.0
 Template: Howdy
 */
+html{
+    height:calc(100%);
+}
 
 body {
-    background: url('images/bristol.jpg');
-    background-size: 100%;
+    background:#FFF url('images/bristol.jpg') no-repeat;
+    background-size:cover;
+    height:calc(100%);
 }
 
-.prospectus-well {
-    background: rgba(0,0,0,0.5);
-    color: #FFFFFF;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    border: none;
-}
+
 
 .form-control::-moz-placeholder {
     color: #555555
