@@ -16,6 +16,11 @@
 //== Buttons
 
 //== Forms
+input:not([type="checkbox"]), textarea, select, button {
+  min-height: 0px;
+  .border-top-radius(@border-radius-large);
+  .border-bottom-radius(@border-radius-large);
+}
 
 //== Dropdowns
 
@@ -77,7 +82,13 @@
 //== Thumbnails
 
 //== Wells
-
+.prospectus-well {
+  background: rgba(0,0,0,0.8);
+  color: #FFFFFF;
+  border:none;
+  .border-top-radius((@border-radius-large*2));
+  .border-bottom-radius((@border-radius-large*2));
+}
 //== Badges
 
 //== Breadcrumbs
@@ -91,7 +102,10 @@
 //== Type
 
 //== Miscellaneous
-
+i.fa-question-circle{
+  cursor: help;
+  color:@prospectus-blue;
+}
 
 //
 // Custom mixins ** 451

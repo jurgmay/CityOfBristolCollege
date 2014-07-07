@@ -1,95 +1,98 @@
 <div class="container row">
-    <div class="col-xs-12 col-lg-4 col-lg-offset-4">
-        <div class="well prospectus-well">
-            <div class="row">
-                <div class="col-xs-10">
-                    <span ng-show="step == 1">Simply select, click and go.</span>
-                    <span ng-show="step == 2">A little more about you</span>
-                </div>
-                <div class="col-xs-2">
-                    <figure>
-                        <img style="width: 100%" ng-src="{{user.Company.LogoUrl}}" />
-                    </figure>
-                </div>
-            </div>
-            <div class="row text-center" style="margin-top: 15px;">
-                <form name="form_1" ng-show="step == 1">
-                    <div class="form-group">
-                        <select style="margin-bottom: 5px;" class="form-control" ng-required="true" ng-model="product.Specs.vCourse1.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
-                            <option value="">What courses are you interested in?</option>
-                        </select>
-                        <select style="margin-bottom: 5px;" class="form-control" ng-required="true" ng-model="product.Specs.vCourse2.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
-                            <option value="">What courses are you interested in?</option>
-                        </select>
-                        <select style="margin-bottom: 5px;" class="form-control" ng-required="true" ng-model="product.Specs.vCourse3.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
-                            <option value="">What courses are you interested in?</option>
-                        </select>
-                    </div>
-                    <div class="row" style="text-align: left;">
-                        <span>  Almost done...</span>
-                    </div>
-                    <div class="form-group">
-                        <div class="row" style="padding-bottom: 5px;">
-                            <div class="col-xs-5">
-                                <input class="form-control" ng-required="true" placeholder="Your first name" size="{{customfield.Width * .13}}" ng-maxlength="{{customfield.MaxLength}}" type="text" autocomplete="off" ng-model="product.Specs.vFirstName.Value"></input>
-                            </div>
-                            <div class="col-xs-6">
-                                <input class="form-control" ng-required="true" placeholder="Your last name" size="{{customfield.Width * .13}}" ng-maxlength="{{customfield.MaxLength}}" type="text" autocomplete="off" ng-model="product.Specs.vLastName.Value"></input>
-                            </div>
-                            <div class="col-xs-1">
-                                <i class="fa fa-question-circle" popover-placement="right" popover-trigger="mouseenter" popover="Help text here"></i>
-                            </div>
+    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="well prospectus-well">
+                    <div class="row">
+                        <div class="col-xs-10">
+                            <h3>
+                                <span ng-show="step == 1">Simply select, click and go.</span>
+                                <span ng-show="step == 2">A little more about you</span>
+                            </h3>
                         </div>
-                        <div class="row" style="padding-bottom: 5px;">
-                            <div class="col-xs-11">
-                                <input class="form-control" ng-required="true" placeholder="Email address" size="{{customfield.Width * .13}}" ng-maxlength="{{customfield.MaxLength}}" type="text" autocomplete="off" ng-model="product.Specs.Email.Value"  ng-pattern="/^(([^<>()[\]\\.,;:\s@\']+(\.[^<>()[\]\\.,;:\s@\']+)*)|(\'.+\'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/"></input>
-                            </div>
-                            <div class="col-xs-1">
-                                <i class="fa fa-question-circle" popover-placement="right" popover-trigger="mouseenter" popover="Help text here"></i>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-11">
-                                <input class="form-control" placeholder="And your mobile too (this one's optional)" size="{{customfield.Width * .13}}" ng-maxlength="{{customfield.MaxLength}}" type="text" autocomplete="off" ng-model="product.Specs.Mobile.Value"></input>
-                            </div>
-                            <div class="col-xs-1">
-                                <i class="fa fa-question-circle" popover-placement="right" popover-trigger="mouseenter" popover="Help text here"></i>
-                            </div>
+                        <div class="col-xs-2">
+                            <figure>
+                                <img style="width: 100%" ng-src="{{user.Company.LogoUrl}}" />
+                            </figure>
                         </div>
                     </div>
-                </form>
-                <form name="form_2" ng-show="step == 2">
-                    <div class="form-group">
-                        <select style="margin-bottom: 5px;" class="form-control" ng-required="true" ng-model="product.Specs.vCourse1.Value" ng-options="option.Value as option.Value for option in product.Specs.Age.Options">
-                            <option value="">How old are you?</option>
-                        </select>
-                        <select style="margin-bottom: 5px;" class="form-control" ng-required="true" ng-model="product.Specs.vCourse2.Value" ng-options="option.Value as option.Value for option in product.Specs.Disabilities.Options">
-                            <option value="">Do you have any disabilities?</option>
-                        </select>
-                        <select style="margin-bottom: 5px;" class="form-control" ng-required="" ng-model="product.Specs.vCourse3.Value" ng-options="option.Value as option.Value for option in product.Specs.Question1.Options">
-                            <option value="">Add question here?</option>
-                        </select>
-                        <select style="margin-bottom: 5px;" class="form-control" ng-required="" ng-model="product.Specs.vCourse3.Value" ng-options="option.Value as option.Value for option in product.Specs.Question2.Options">
-                            <option value="">Add question here?</option>
-                        </select>
-                        <select style="margin-bottom: 5px;" class="form-control" ng-required="" ng-model="product.Specs.vCourse3.Value" ng-options="option.Value as option.Value for option in product.Specs.Question3.Options">
-                            <option value="">Add question here?</option>
-                        </select>
-                    </div>
-                </form>
-                <div ng-show="step == 3">
-                    <div class="row text-center">
-                        <div class="col-xs-12 col-lg-8 col-lg-offset-2">
-                            <b>Thank you!</b>
-                            <p>You'll soon receive an email with a link to download your personalised HE Course Guide</p>
+                    <div class="row">
+                        <form name="form_1" ng-show="step == 1">
+                            <div class="form-group">
+                                <select style="margin-bottom: 5px;" class="form-control" ng-required="true" ng-model="product.Specs.vCourse1.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
+                                    <option value="">What courses are you interested in?</option>
+                                </select>
+                                <select style="margin-bottom: 5px;" class="form-control" ng-required="true" ng-model="product.Specs.vCourse2.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
+                                    <option value="">What courses are you interested in?</option>
+                                </select>
+                                <select style="margin-bottom: 5px;" class="form-control" ng-required="true" ng-model="product.Specs.vCourse3.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
+                                    <option value="">What courses are you interested in?</option>
+                                </select>
+                            </div>
+                            <h4 style="font-weight:600;">Almost done...</h4>
+                            <div class="form-group">
+                                <div class="row" style="padding-bottom: 5px;">
+                                    <div class="col-xs-5">
+                                        <input class="form-control" ng-required="true" placeholder="Your first name" size="{{customfield.Width * .13}}" ng-maxlength="{{customfield.MaxLength}}" type="text" autocomplete="off" ng-model="product.Specs.vFirstName.Value"></input>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input class="form-control" ng-required="true" placeholder="Your last name" size="{{customfield.Width * .13}}" ng-maxlength="{{customfield.MaxLength}}" type="text" autocomplete="off" ng-model="product.Specs.vLastName.Value"></input>
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <i class="fa fa-question-circle" popover-placement="right" popover-trigger="mouseenter" popover="Help text here"></i>
+                                    </div>
+                                </div>
+                                <div class="row" style="padding-bottom: 5px;">
+                                    <div class="col-xs-11">
+                                        <input class="form-control" ng-required="true" placeholder="Email address" size="{{customfield.Width * .13}}" ng-maxlength="{{customfield.MaxLength}}" type="text" autocomplete="off" ng-model="product.Specs.Email.Value"  ng-pattern="/^(([^<>()[\]\\.,;:\s@\']+(\.[^<>()[\]\\.,;:\s@\']+)*)|(\'.+\'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/"></input>
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <i class="fa fa-question-circle" popover-placement="right" popover-trigger="mouseenter" popover="Help text here"></i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-11">
+                                        <input class="form-control" placeholder="And your mobile too (this one's optional)" size="{{customfield.Width * .13}}" ng-maxlength="{{customfield.MaxLength}}" type="text" autocomplete="off" ng-model="product.Specs.Mobile.Value"></input>
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <i class="fa fa-question-circle" popover-placement="right" popover-trigger="mouseenter" popover="Help text here"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <form name="form_2" ng-show="step == 2">
+                            <div class="form-group">
+                                <select style="margin-bottom: 5px;" class="form-control" ng-required="true" ng-model="product.Specs.vCourse1.Value" ng-options="option.Value as option.Value for option in product.Specs.Age.Options">
+                                    <option value="">How old are you?</option>
+                                </select>
+                                <select style="margin-bottom: 5px;" class="form-control" ng-required="true" ng-model="product.Specs.vCourse2.Value" ng-options="option.Value as option.Value for option in product.Specs.Disabilities.Options">
+                                    <option value="">Do you have any disabilities?</option>
+                                </select>
+                                <select style="margin-bottom: 5px;" class="form-control" ng-required="" ng-model="product.Specs.vCourse3.Value" ng-options="option.Value as option.Value for option in product.Specs.Question1.Options">
+                                    <option value="">Add question here?</option>
+                                </select>
+                                <select style="margin-bottom: 5px;" class="form-control" ng-required="" ng-model="product.Specs.vCourse3.Value" ng-options="option.Value as option.Value for option in product.Specs.Question2.Options">
+                                    <option value="">Add question here?</option>
+                                </select>
+                                <select style="margin-bottom: 5px;" class="form-control" ng-required="" ng-model="product.Specs.vCourse3.Value" ng-options="option.Value as option.Value for option in product.Specs.Question3.Options">
+                                    <option value="">Add question here?</option>
+                                </select>
+                            </div>
+                        </form>
+                        <div ng-show="step == 3">
+                            <div class="row text-center">
+                                <div class="col-xs-12 col-lg-8 col-lg-offset-2">
+                                    <h3><b>Thank you!</b></h3>
+                                    <p class="lead">You'll soon receive an email with a link to download your personalised HE Course Guide</p>
+                                </div>
+                            </div>
                         </div>
+                        <div class="btn btn-info" style="width: 98%;" ng-show="step == 1" ng-disabled="form_1.$invalid" ng-click="nextStep()">Go for it!</div>
+                        <div class="btn btn-info" style="width: 98%;" ng-show="step == 2" ng-disabled="form_2.$invalid" ng-click="submitProspectus()">Thank you!</div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="btn btn-info" style="width: 98%;" ng-show="step == 1" ng-disabled="form_1.$invalid" ng-click="nextStep()">Go for it!</div>
-                    <div class="btn btn-info" style="width: 98%;" ng-show="step == 2" ng-disabled="form_2.$invalid" ng-click="submitProspectus()">Thank you!</div>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
