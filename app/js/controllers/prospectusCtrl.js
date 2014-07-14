@@ -39,7 +39,7 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
         var lastName = variant.Specs['vLastName'].Value;
         var fullName = firstName + " " + lastName;
         var toEmail = variant.Specs['Email'].Value;
-        var pdfURL = variant.ProductionURL;
+        var pdfURL = variant.ProductionURL.replace('web.four51.com','.four51.com');
         var logo = $scope.user.Company.LogoUrl.replace('qa.four51','www.four51');
         var template_content = [
             {
