@@ -17,25 +17,32 @@
                     </div>
                     <div class="row">
                         <form name="form_1" ng-show="step == 1">
-                            <div class="form-group">
-                                <select style="margin-bottom: 5px; color: #555555;" class="form-control" ng-required="true" ng-model="product.Specs.vCourse1.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
-                                    <option value="">What courses are you interested in?</option>
-                                </select>
-                                <select style="margin-bottom: 5px; color: #555555;" class="form-control" ng-required="true" ng-model="product.Specs.vCourse2.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
-                                    <option value="">What courses are you interested in?</option>
-                                </select>
-                                <select style="margin-bottom: 5px; color: #555555;" class="form-control" ng-required="true" ng-model="product.Specs.vCourse3.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
-                                    <option value="">What courses are you interested in?</option>
-                                </select>
+                            <div class="row">
+                                <div class="col-xs-11">
+                                    <div class="form-group">
+                                        <select style="margin-bottom: 5px; color: #555555;" class="form-control" ng-model="product.Specs.vCourse1.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
+                                            <option value="">What courses are you interested in? (required)</option>
+                                        </select>
+                                        <select style="margin-bottom: 5px; color: #555555;" class="form-control" ng-model="product.Specs.vCourse2.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
+                                            <option value="">What courses are you interested in? (required)</option>
+                                        </select>
+                                        <select style="margin-bottom: 5px; color: #555555;" class="form-control" ng-model="product.Specs.vCourse3.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
+                                            <option value="">What courses are you interested in? (required)</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                             <h4 style="font-weight:600;">Not seeing what you want?</h4>
                             <div class="form-group">
                                 <div class="row" style="padding-bottom: 5px;">
                                     <div class="col-xs-11">
-                                        <input class="form-control" ng-maxlength="100" ng-required="false" placeholder="What course(s) would you like to do that aren't listed above?" type="text" autocomplete="off" ng-model="product.Specs.RequestCourse.Value"></input>
+                                        <input class="form-control" ng-maxlength="100" placeholder="What course(s) would you like to do that aren't listed above?" type="text" autocomplete="off" ng-model="product.Specs.RequestCourse.Value"></input>
                                     </div>
                                     <div class="col-xs-1">
-                                        <i class="fa fa-question-circle" popover-placement="right" popover-trigger="mouseenter" popover="Help text here"></i>
+                                        <span class="fa-stack" popover-placement="right" popover-trigger="mouseenter" popover="Help text here">
+                                          <i class="fa fa-circle fa-stack-1x" style="color:#fff; font-size:0.8em;"></i>
+                                          <i class="fa fa-question-circle fa-stack-1x fa-inverse"></i>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -43,39 +50,51 @@
                             <div class="form-group">
                                 <div class="row" style="padding-bottom: 5px;">
                                     <div class="col-xs-5">
-                                        <input class="form-control" ng-maxlength="100" ng-required="true" placeholder="Your first name" type="text" autocomplete="off" ng-model="product.Specs.vFirstName.Value"></input>
+                                        <input class="form-control" ng-maxlength="100" placeholder="Your first name (required)" type="text" autocomplete="off" ng-model="product.Specs.vFirstName.Value"></input>
                                     </div>
                                     <div class="col-xs-6">
-                                        <input class="form-control" ng-maxlength="100" ng-required="true" placeholder="Your last name" type="text" autocomplete="off" ng-model="product.Specs.vLastName.Value"></input>
+                                        <input class="form-control" ng-maxlength="100" placeholder="Your last name (required)" type="text" autocomplete="off" ng-model="product.Specs.vLastName.Value"></input>
                                     </div>
                                     <div class="col-xs-1">
-                                        <i class="fa fa-question-circle" popover-placement="right" popover-trigger="mouseenter" popover="Help text here"></i>
+                                        <span class="fa-stack" popover-placement="right" popover-trigger="mouseenter" popover="Help text here">
+                                          <i class="fa fa-circle fa-stack-1x" style="color:#fff; font-size:0.8em;"></i>
+                                          <i class="fa fa-question-circle fa-stack-1x fa-inverse"></i>
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="row" style="padding-bottom: 5px;">
                                     <div class="col-xs-11">
-                                        <input class="form-control" ng-maxlength="100" ng-required="true" placeholder="Your age" type="text" autocomplete="off" ng-model="product.Specs.Age.Value"></input>
+                                        <input class="form-control" ng-maxlength="100" placeholder="Your age (required)" type="text" autocomplete="off" ng-model="product.Specs.Age.Value"></input>
                                     </div>
                                     <div class="col-xs-1">
-                                        <i class="fa fa-question-circle" popover-placement="right" popover-trigger="mouseenter" popover="Help text here"></i>
+                                        <span class="fa-stack" popover-placement="right" popover-trigger="mouseenter" popover="Help text here">
+                                          <i class="fa fa-circle fa-stack-1x" style="color:#fff; font-size:0.8em;"></i>
+                                          <i class="fa fa-question-circle fa-stack-1x fa-inverse"></i>
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="row" style="padding-bottom: 5px;">
                                     <div class="col-xs-11">
-                                        <select class="form-control" style="color: #555555" ng-required="true" ng-model="product.Specs.HighestQualification.Value" ng-options="option.Value as option.Value for option in product.Specs.HighestQualification.Options">
-                                            <option value="">Your highest qualification</option>
+                                        <select class="form-control" style="color: #555555" ng-model="product.Specs.HighestQualification.Value" ng-options="option.Value as option.Value for option in product.Specs.HighestQualification.Options">
+                                            <option value="">Your highest qualification (required)</option>
                                         </select>
                                     </div>
                                     <div class="col-xs-1">
-                                        <i class="fa fa-question-circle" popover-placement="right" popover-trigger="mouseenter" popover="Help text here"></i>
+                                        <span class="fa-stack" popover-placement="right" popover-trigger="mouseenter" popover="Help text here">
+                                          <i class="fa fa-circle fa-stack-1x" style="color:#fff; font-size:0.8em;"></i>
+                                          <i class="fa fa-question-circle fa-stack-1x fa-inverse"></i>
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="row" style="padding-bottom: 5px;">
                                     <div class="col-xs-11">
-                                        <input class="form-control" ng-maxlength="100" ng-required="true" placeholder="Email address" type="text" autocomplete="off" ng-model="product.Specs.Email.Value"  ng-pattern="/^(([^<>()[\]\\.,;:\s@\']+(\.[^<>()[\]\\.,;:\s@\']+)*)|(\'.+\'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/"></input>
+                                        <input class="form-control" ng-maxlength="100" placeholder="Email address (required)" type="text" autocomplete="off" ng-model="product.Specs.Email.Value"></input>
                                     </div>
                                     <div class="col-xs-1">
-                                        <i class="fa fa-question-circle" popover-placement="right" popover-trigger="mouseenter" popover="Help text here"></i>
+                                        <span class="fa-stack" popover-placement="right" popover-trigger="mouseenter" popover="Help text here">
+                                          <i class="fa fa-circle fa-stack-1x" style="color:#fff; font-size:0.8em;"></i>
+                                          <i class="fa fa-question-circle fa-stack-1x fa-inverse"></i>
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -83,7 +102,10 @@
                                         <input class="form-control" ng-maxlength="100" placeholder="And finally, your mobile" type="text" autocomplete="off" ng-model="product.Specs.Mobile.Value"></input>
                                     </div>
                                     <div class="col-xs-1">
-                                        <i class="fa fa-question-circle" popover-placement="right" popover-trigger="mouseenter" popover="Help text here"></i>
+                                        <span class="fa-stack" popover-placement="right" popover-trigger="mouseenter" popover="Help text here">
+                                          <i class="fa fa-circle fa-stack-1x" style="color:#fff; font-size:0.8em;"></i>
+                                          <i class="fa fa-question-circle fa-stack-1x fa-inverse"></i>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -93,12 +115,18 @@
                                 <div class="col-xs-12 col-lg-8 col-lg-offset-2">
                                     <h3><b>Thank you!</b></h3>
                                     <p class="lead">You'll soon receive an email with a link to download your personalised HE Course Guide</p>
+                                    <p class="lead">Visit our website at website at <a href="http://www.cityofbristol.ac.uk" target="_blank" style="color: #fff; text-decoration: underline;">www.cityofbristol.ac.uk</a></p>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-11">
-                                <div class="btn btn-info" style="width: 100%;" ng-show="step == 1" ng-disabled="form_1.$invalid" ng-click="submitProspectus()">Order my prospectus</div>
+                                <div class="btn btn-info" style="width: 100%; font-size: 20px;" ng-show="step == 1" ng-click="submitProspectus()"
+                                        ng-disabled="!product.Specs.vCourse1.Value || !product.Specs.vCourse2.Value || !product.Specs.vCourse3.Value ||
+                                                    !product.Specs.vFirstName.Value || !product.Specs.vLastName.Value || !product.Specs.Age.Value ||
+                                                    !product.Specs.HighestQualification.Value || !product.Specs.Email.Value">
+                                    Order my prospectus
+                                </div>
                             </div>
                         </div>
                     </div>

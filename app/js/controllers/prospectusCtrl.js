@@ -23,13 +23,7 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
             sendEmail(v);
             $scope.step = 2;
         });
-    }
-
-    $scope.$watch('product.Specs.Mobile.Value', function(newval, oldval) {
-        if (newval) {
-            $scope.product.Specs.Mobile.Value = $scope.product.Specs.Mobile.Value.replace(/\D/g,'');
-        }
-    });
+    };
 
     function sendEmail(variant) {
         //mandrill_client = new mandrill.Mandrill('wuy_yqU4xM44FjwrDenzGA'); //Test Key
@@ -48,7 +42,7 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
             },
             {
                 "name": 'body',
-                "content": '<a style="display: block; text-decoration: none; color: #FFF; background-color: #38c0ff; text-align: center; border-radius: 8px; padding: 5px;" href="' + pdfURL + '" target="_blank">Download Now!</a>'
+                "content": '<a style="display: block; text-decoration: none; color: #FFF; background-color: #38c0ff; text-align: center; border-radius: 8px; padding: 5px;" href="' + pdfURL + '" target="_blank">Download my prospectus</a>'
             },
             {
                 "name": 'logo',
@@ -56,9 +50,9 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
             }
         ];
         var message = {
-            'subject': 'Test email subject',
+            'subject': 'Your personalised prospectus from City of Bristol College',
             'from_email': 'testmail@four51.com',
-            'from_name': 'From User',
+            'from_name': 'City of Bristol College',
             'to': [{
                 'email': toEmail,
                 'name': fullName,
