@@ -9,7 +9,7 @@ html{
 }
 
 body {
-    background:#FFF url('images/bristol.jpg') no-repeat;
+    background:#FFF url('images/backgrounds/1.jpg') no-repeat;
     background-size:cover;
     height:calc(100%);
 }
