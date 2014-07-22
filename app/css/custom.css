@@ -9,8 +9,8 @@ html{
 }
 
 body {
-    background:#FFF url('images/backgrounds/1.jpg') no-repeat;
-    background-size:cover;
+    /*background:#FFF url('images/backgrounds/1.jpg') no-repeat;
+    background-size:cover;*/
     height:calc(100%);
 }
 
