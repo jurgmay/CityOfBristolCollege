@@ -26,8 +26,12 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
     };
 
     function sendEmail(variant) {
-        //mandrill_client = new mandrill.Mandrill('wuy_yqU4xM44FjwrDenzGA'); //Test Key
-        mandrill_client = new mandrill.Mandrill('SzIKUx5tFAs7Xse7UzvBiQ'); //Live Key
+        //mandrill_client = new mandrill.Mandrill('wuy_yqU4xM44FjwrDenzGA'); //Four51 Test Key
+        //mandrill_client = new mandrill.Mandrill('SzIKUx5tFAs7Xse7UzvBiQ'); //Four51 Live Key
+
+        //mandrill_client = new mandrill.Mandrill('Ke6eCmBhFJDpxR65jD4fcw'); //Accent Test Key
+        mandrill_client = new mandrill.Mandrill('3oXmWhr-hEQqwzqawyH_dQ'); //Accent Live Key
+
         var template_name = "bristol";
         var firstName = variant.Specs['vFirstName'].Value;
         var lastName = variant.Specs['vLastName'].Value;
@@ -51,7 +55,7 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
         ];
         var message = {
             'subject': 'Your personalised prospectus from City of Bristol College',
-            'from_email': 'testmail@four51.com',
+            'from_email': 'test@accent.com',
             'from_name': 'City of Bristol College',
             'to': [{
                 'email': toEmail,
@@ -59,7 +63,7 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
                 'type': 'to'
             }],
             'headers': {
-                'Reply-To': 'testmail@four51.com'
+                'Reply-To': 'test@accent.com'
             },
             'important': false
         };
