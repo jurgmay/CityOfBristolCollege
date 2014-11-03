@@ -1,15 +1,7 @@
 four51.app.factory('Prospectus', ['$resource', '$451', function($resource, $451) {
-    /*function _then(fn, data) {
-        if (angular.isFunction(fn))
-            fn(data);
-    }*/
 
     var _send = function(variant, user) {
-        //mandrill_client = new mandrill.Mandrill('wuy_yqU4xM44FjwrDenzGA'); //Four51 Test Key
-        //mandrill_client = new mandrill.Mandrill('SzIKUx5tFAs7Xse7UzvBiQ'); //Four51 Live Key
-
-        //mandrill_client = new mandrill.Mandrill('Ke6eCmBhFJDpxR65jD4fcw'); //Accent Test Key
-        mandrill_client = new mandrill.Mandrill('3oXmWhr-hEQqwzqawyH_dQ'); //Accent Live Key
+        var mandrill_client = new mandrill.Mandrill('3oXmWhr-hEQqwzqawyH_dQ');
 
         var template_name = "bristol";
         var firstName = variant.Specs['vFirstName'].Value;
