@@ -6,7 +6,13 @@
 //== Colors
 
 //== Scaffolding
-
+html {
+  overflow:auto;
+}
+body {
+  background-image:url('../images/bg-main.gif');
+  margin-bottom:0;
+}
 //== Typography
 
 //== Components
@@ -84,12 +90,65 @@ input:not([type="checkbox"]), textarea, select, button {
 //== Thumbnails
 
 //== Wells
-.prospectus-well {
-  background: rgba(0,0,0,0.8);
-  color: #FFFFFF;
-  border:none;
-  .border-top-radius((@border-radius-large*2));
-  .border-bottom-radius((@border-radius-large*2));
+.prospectus-container {
+  max-width:700px;
+  margin:0 auto;
+  padding:10px;
+  @media(min-width: @screen-md-min) {
+	padding:50px;
+  }
+  .prospectus-bar {
+	#gradient.vertical(#028FC2, #0080AF);
+	margin: 0 -20px 15px;
+	padding:5px 20px 8px;
+	h1 {
+	  color:#fff;
+	  margin:0;
+	  font-size:1.6em;
+	}
+  }
+  h2 {
+	margin:14px 0 16px;
+	padding:0 0 15px;
+	font-size:1.2em;
+	font-weight:bold;
+	border-bottom:1px solid #BED5E9;
+	position:relative;
+	&:after {
+	  content:' ';
+	  position:absolute;
+	  left:0;
+	  right:0;
+	  bottom:-2px;
+	  height:1px;
+	  background-color:#fff;
+	}
+  }
+  .well {
+	background-color: #EDF3F9;
+	border: 1px solid #BED5E9;
+	color: #444444;
+	.border-top-radius(@border-radius-large);
+	.border-bottom-radius(@border-radius-large);
+	.box-shadow(0 5px 10px 0 rgba(0,0,0,0.6));
+  }
+  img.logo {
+	max-width:100%;
+	margin:0 auto 15px;
+  }
+  select {
+	color:#555;
+  }
+  .fa-circle.fa-stack-1x {
+	color:#fff;
+	font-size:0.8em;
+  }
+  .form-group {
+	& > .row,
+	& > select {
+	  margin-bottom:5px;
+	}
+  }
 }
 //== Badges
 

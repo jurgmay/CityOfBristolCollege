@@ -2159,8 +2159,8 @@ fieldset[disabled] .btn-success.active {
 }
 .btn-info {
   color: #ffffff;
-  background-color: #38c0ff;
-  border-color: #1fb8ff;
+  background-color: #007eac;
+  border-color: #006b93;
 }
 .btn-info:hover,
 .btn-info:focus,
@@ -2168,8 +2168,8 @@ fieldset[disabled] .btn-success.active {
 .btn-info.active,
 .open .dropdown-toggle.btn-info {
   color: #ffffff;
-  background-color: #0fb3ff;
-  border-color: #0099e0;
+  background-color: #006083;
+  border-color: #003e55;
 }
 .btn-info:active,
 .btn-info.active,
@@ -2191,11 +2191,11 @@ fieldset[disabled] .btn-info:active,
 .btn-info.disabled.active,
 .btn-info[disabled].active,
 fieldset[disabled] .btn-info.active {
-  background-color: #38c0ff;
-  border-color: #1fb8ff;
+  background-color: #007eac;
+  border-color: #006b93;
 }
 .btn-info .badge {
-  color: #38c0ff;
+  color: #007eac;
   background-color: #ffffff;
 }
 .btn-warning {
@@ -4361,11 +4361,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: #449d44;
 }
 .label-info {
-  background-color: #38c0ff;
+  background-color: #007eac;
 }
 .label-info[href]:hover,
 .label-info[href]:focus {
-  background-color: #05b0ff;
+  background-color: #005979;
 }
 .label-warning {
   background-color: #f0ad4e;
@@ -4612,7 +4612,7 @@ a.thumbnail.active {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .progress-bar-info {
-  background-color: #38c0ff;
+  background-color: #007eac;
 }
 .progress-striped .progress-bar-info {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -7011,8 +7011,8 @@ select.ng-invalid:invalid:invalid:focus {
   background-color: #5cb85c;
 }
 .jumbotron.blue {
-  color: #333;
-  background-color: #38c0ff;
+  color: #fff;
+  background-color: #007eac;
 }
 .jumbotron.yellow {
   color: #333;
@@ -10015,6 +10015,13 @@ table[datepicker] {
 .fa-bomb:before {
   content: "\f1e2";
 }
+html {
+  overflow: auto;
+}
+body {
+  background-image: url('../images/bg-main.gif');
+  margin-bottom: 0;
+}
 input:not([type="checkbox"]),
 textarea,
 select,
@@ -10030,16 +10037,73 @@ button {
     margin-bottom: 5px;
   }
 }
-.prospectus-well {
-  background: rgba(0, 0, 0, 0.8);
-  color: #FFFFFF;
-  border: none;
-  border-top-right-radius: 12px;
-  border-top-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  border-bottom-left-radius: 12px;
+.prospectus-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 10px;
+}
+@media (min-width: 992px) {
+  .prospectus-container {
+    padding: 50px;
+  }
+}
+.prospectus-container .prospectus-bar {
+  background-image: -webkit-linear-gradient(top, #028fc2 0%, #0080af 100%);
+  background-image: linear-gradient(to bottom, #028fc2 0%, #0080af 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff028fc2', endColorstr='#ff0080af', GradientType=0);
+  margin: 0 -20px 15px;
+  padding: 5px 20px 8px;
+}
+.prospectus-container .prospectus-bar h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.6em;
+}
+.prospectus-container h2 {
+  margin: 14px 0 16px;
+  padding: 0 0 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-bottom: 1px solid #BED5E9;
+  position: relative;
+}
+.prospectus-container h2:after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background-color: #fff;
+}
+.prospectus-container .well {
+  background-color: #EDF3F9;
+  border: 1px solid #BED5E9;
+  color: #444444;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);
+}
+.prospectus-container img.logo {
+  max-width: 100%;
+  margin: 0 auto 15px;
+}
+.prospectus-container select {
+  color: #555;
+}
+.prospectus-container .fa-circle.fa-stack-1x {
+  color: #fff;
+  font-size: 0.8em;
+}
+.prospectus-container .form-group > .row,
+.prospectus-container .form-group > select {
+  margin-bottom: 5px;
 }
 i.fa-question-circle {
   cursor: help;
-  color: #38c0ff;
+  color: #007eac;
 }

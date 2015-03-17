@@ -4,17 +4,6 @@ Theme name: My SPA Theme
 Version: 1.0
 Template: Howdy
 */
-html{
-    height:calc(100%);
-}
-
-body {
-    /*background:#FFF url('images/backgrounds/1.jpg') no-repeat;
-    background-size:cover;*/
-    height:calc(100%);
-}
-
-
 
 .form-control::-moz-placeholder {
     color: #555555
