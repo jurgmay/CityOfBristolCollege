@@ -7,12 +7,11 @@
 				</figure>
 			</div>
 		</div>
-		<div ng-show="step == 1">
+		<div ng-show="step == 'form'">
 			<div class="prospectus-bar">
 				<h1>Simply select, click, and go.</h1>
 			</div>
 			<form name="form_1">
-
 
 				<h2>Group 1</h2>
 				<div class="form-group">
@@ -75,7 +74,8 @@
 				Order my prospectus
 			</div>
 		</div>
-		<div ng-show="step == 2">
+        <loadingindicator  ng-show="step == 'loading'"></loadingindicator>
+        <div ng-show="step == 'confirmation'">
 			<div class="prospectus-bar">
 				<h1 class="text-center">Thank You!</h1>
 			</div>

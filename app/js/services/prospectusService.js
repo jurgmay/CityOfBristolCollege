@@ -1,4 +1,4 @@
-four51.app.factory('Prospectus', ['$resource', '$451', function($resource, $451) {
+four51.app.factory('Prospectus', ['$resource', '$451', 'Order', 'AddressList', 'User', function($resource, $451, Order, AddressList, User) {
 
     var _send = function(variant, user) {
         var mandrill_client = new mandrill.Mandrill('3oXmWhr-hEQqwzqawyH_dQ');
@@ -48,7 +48,47 @@ four51.app.factory('Prospectus', ['$resource', '$451', function($resource, $451)
         });
     };
 
+    var _createOrder = function(variant, product, user, success) {
+        var lineItem = {
+            Variant: variant,
+            Quantity: "1",
+            Product: product,
+            DateNeeded: new Date()
+        };
+        var order = {
+            LineItems: [lineItem]
+        };
+        Order.save(order, function(data) {
+            AddressList.query(function (list, count) {
+                angular.forEach(list, function(address) {
+                    if (address.AddressName == 'South Bristol Skills Academy') {
+                        data.ShipAddressID = address.ID;
+                        data.LineItems[0].ShipAddressID = address.ID;
+                    }
+                });
+
+                data.PaymentMethod = 'PurchaseOrder';
+                data.CostCenter = "Prospectus";
+                data.ExternalID = 'auto';
+                user.FirstName = variant.Specs['vFirstName'].Value;
+                user.LastName = variant.Specs['vLastName'].Value;
+                user.Email = variant.Specs['Email'].Value;
+                User.save(user, function(u) {
+                    u.CurrentOrderID = data.ID;
+                    Order.submit(data,
+                        function(o) {
+                            success(o);
+                        },
+                        function(ex) {
+                            success(ex);
+                        });
+                });
+            }, 1, 100);
+        });
+    };
+
     return {
-        send: _send
+        send: _send,
+        createOrder: _createOrder
     }
 }]);
