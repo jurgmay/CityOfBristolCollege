@@ -22,7 +22,7 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
         };
 
         Variant.save(variant, function(v) {
-            //sendEmail(v);
+            sendEmail(v);
             Prospectus.createOrder(v, $scope.product, $scope.user, function(data) {
                 $scope.loadingIndicator = false;
                 $scope.step = 'confirmation';
