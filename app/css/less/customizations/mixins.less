@@ -94,6 +94,9 @@ input:not([type="checkbox"]), textarea, select, button {
 
 //== Wells
 .prospectus-container {
+  & > a {
+    display:block;
+  }
   max-width:700px;
   margin:0 auto;
   padding:10px;
@@ -141,6 +144,12 @@ input:not([type="checkbox"]), textarea, select, button {
   }
   select {
 	color:#555;
+    border:1px solid #bad2e5;
+    background: linear-gradient(bottom, #eae8e8 0%, #fcfcfc 100%);
+    background: -o-linear-gradient(bottom, #eae8e8 0%, #fcfcfc 100%);
+    background: -moz-linear-gradient(bottom, #eae8e8 0%, #fcfcfc 100%);
+    background: -webkit-linear-gradient(bottom, #eae8e8 0%, #fcfcfc 100%);
+    -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
   }
   .fa-circle.fa-stack-1x {
 	color:#fff;
@@ -148,11 +157,30 @@ input:not([type="checkbox"]), textarea, select, button {
   }
   input {
 	margin-bottom:5px;
+    -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
+    border:1px solid #bad2e5;
+    background:#fff;
+    -moz-box-shadow: 0 5px 4px -3px rgba(0, 0, 0, 0.1) inset;
+    -webkit-box-shadow: 0 5px 4px -3px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 5px 4px -3px rgba(0, 0, 0, 0.1) inset;
   }
   .form-group {
 	& > select {
 	  margin-bottom:5px;
 	}
+  }
+  .btn-success {
+    #gradient.vertical(@brand-success, darken(@brand-success,10));
+    position:relative;
+    &:before{
+      content:' ';
+      position:absolute;
+      left:0;
+      top:0;
+      bottom:0;
+      right:0;
+      background: url('//api.thumbr.it/whitenoise-100x100.png?background=ffffff00&noise=83bd2c&density=51&opacity=33');
+    }
   }
 }
 //== Badges
