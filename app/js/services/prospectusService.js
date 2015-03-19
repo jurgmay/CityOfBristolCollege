@@ -9,24 +9,24 @@ four51.app.factory('Prospectus', ['$resource', '$451', function($resource, $451)
         var fullName = firstName + " " + lastName;
         var toEmail = variant.Specs['Email'].Value;
         var pdfURL = variant.ProductionURL.replace('web.four51.com','.four51.com');
-        var logo = user.Company.LogoUrl.replace('qa.four51','www.four51');
+        var currentYear = new Date().getFullYear();
         var template_content = [
             {
-                "name": 'header',
-                "content": 'Hello ' + firstName
+                "name": 'firstname',
+                "content": firstName
             },
             {
-                "name": 'body',
-                "content": '<a style="display: block; text-decoration: none; color: #FFF; background-color: #38c0ff; text-align: center; border-radius: 8px; padding: 5px;" href="' + pdfURL + '" target="_blank">Download my prospectus</a>'
+                "name": 'download',
+                "content": '<a class="mcnButton " title="Download your guide now!" href="' + pdfURL + '" target="_blank" style="font-weight: normal;letter-spacing: 0px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">Download your guide now!</a>'
             },
             {
-                "name": 'logo',
-                "content": '<img src="' + logo + '" style="max-width:100%; padding-bottom:15px;"/>'
+                "name": 'currentyear',
+                "content": currentYear
             }
         ];
         var message = {
             'subject': 'Your personalised prospectus from City of Bristol College',
-            'from_email': 'test@accent.com',
+            'from_email': 'info@accent.uk.com',
             'from_name': 'City of Bristol College',
             'to': [{
                 'email': toEmail,
@@ -34,7 +34,7 @@ four51.app.factory('Prospectus', ['$resource', '$451', function($resource, $451)
                 'type': 'to'
             }],
             'headers': {
-                'Reply-To': 'test@accent.com'
+                'Reply-To': 'info@accent.uk.com'
             },
             'important': false
         };
