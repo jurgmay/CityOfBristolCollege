@@ -12,102 +12,66 @@
 				<h1>Simply select, click, and go.</h1>
 			</div>
 			<form name="form_1">
+
+
+				<h2>Group 1</h2>
 				<div class="form-group">
+					<input class="form-control" ng-maxlength="100" placeholder="Title" type="text" autocomplete="off" ng-model="product.Specs.Title.Value"/>
+					<div class="row">
+						<div class="col-sm-6">
+							<input class="form-control first-name-input" ng-maxlength="100" placeholder="Your first name (required)" type="text" autocomplete="off" ng-model="product.Specs.vFirstName.Value"/>
+						</div>
+						<div class="col-sm-6">
+							<input class="form-control" ng-maxlength="100" placeholder="Your last name (required)" type="text" autocomplete="off" ng-model="product.Specs.vLastName.Value"/>
+						</div>
+					</div>
+					<input class="form-control" ng-maxlength="100" placeholder="Date of Birth (required DD/MM/YYYY)" type="text" autocomplete="off" ng-model="product.Specs.DateOfBirth.Value"/>
+					<input class="form-control" ng-maxlength="100" placeholder="Email address (required)" type="email" autocomplete="off" ng-model="product.Specs.Email.Value" ng-pattern="/^(([^<>()[\]\\.,;:\s@\']+(\.[^<>()[\]\\.,;:\s@\']+)*)|(\'.+\'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/"/>
+					<input class="form-control" ng-maxlength="100" placeholder="And finally, your mobile" type="text" autocomplete="off" ng-model="product.Specs.Mobile.Value"/>
+				</div>
+
+
+				<h2>Group 2</h2>
+				<div class="form-group">
+					<input class="form-control" ng-maxlength="100" placeholder="Address 1" type="text" autocomplete="off" ng-model="product.Specs.vAdd1.Value"/>
+					<input class="form-control" ng-maxlength="100" placeholder="Address 2" type="text" autocomplete="off" ng-model="product.Specs.vAdd2.Value"/>
+					<input class="form-control" ng-maxlength="100" placeholder="Address 3" type="text" autocomplete="off" ng-model="product.Specs.vAdd3.Value"/>
+					<div class="row">
+						<div class="col-sm-6">
+							<input class="form-control" ng-maxlength="100" placeholder="City" type="text" autocomplete="off" ng-model="product.Specs.City.Value"/>
+						</div>
+						<div class="col-sm-6">
+							<input class="form-control" ng-maxlength="100" placeholder="Postcode" type="text" autocomplete="off" ng-model="product.Specs.vPostcode.Value"/>
+						</div>
+					</div>
+				</div>
+
+
+				<h2>Group 3</h2>
+				<div class="form-group">
+					<input class="form-control" ng-maxlength="100" placeholder="{{product.Specs.PreferredYearOfStudy.Label}}" type="text" autocomplete="off" ng-model="product.Specs.PreferredYearOfStudy.Value"/>
 					<select class="form-control" ng-model="product.Specs.vCourse1.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
-						<option value="">What courses are you interested in? (required)</option>
+						<option value="">Subject Area 1</option>
 					</select>
 					<select class="form-control" ng-model="product.Specs.vCourse2.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
-						<option value="">What courses are you interested in? (required)</option>
+						<option value="">Subject Area 2</option>
 					</select>
 					<select class="form-control" ng-model="product.Specs.vCourse3.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
-						<option value="">What courses are you interested in? (required)</option>
+						<option value="">Subject Area 3</option>
 					</select>
-				</div>
-				<h2>Not seeing what you want?</h2>
-				<div class="form-group">
-					<div class="row">
-						<div class="col-sm-11 col-xs-12">
-							<input class="form-control" ng-maxlength="100" placeholder="What course(s) would you like to do that aren't listed above?" type="text" autocomplete="off" ng-model="product.Specs.RequestCourse.Value"/>
-						</div>
-						<div class="col-sm-1 hidden-xs">
-							<span class="fa-stack" popover-placement="right" popover-trigger="mouseenter" popover="Help text here">
-							  <i class="fa fa-circle fa-stack-1x"></i>
-							  <i class="fa fa-question-circle fa-stack-1x fa-inverse"></i>
-							</span>
-						</div>
-					</div>
-				</div>
-				<h2>Almost done...</h2>
-				<div class="form-group">
-					<div class="row">
-						<div class="col-xs-12 col-sm-11">
-							<div class="row">
-								<div class="col-sm-6">
-									<input class="form-control first-name-input" ng-maxlength="100" placeholder="Your first name (required)" type="text" autocomplete="off" ng-model="product.Specs.vFirstName.Value"/>
-								</div>
-								<div class="col-sm-6">
-									<input class="form-control" ng-maxlength="100" placeholder="Your last name (required)" type="text" autocomplete="off" ng-model="product.Specs.vLastName.Value"/>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-1 hidden-xs">
-							<span class="fa-stack" popover-placement="right" popover-trigger="mouseenter" popover="Help text here">
-							  <i class="fa fa-circle fa-stack-1x"></i>
-							  <i class="fa fa-question-circle fa-stack-1x fa-inverse"></i>
-							</span>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12 col-sm-11">
-							<input class="form-control" ng-maxlength="100" placeholder="Your age (required)" type="text" autocomplete="off" ng-model="product.Specs.Age.Value"/>
-						</div>
-						<div class="col-sm-1 hidden-xs">
-							<span class="fa-stack" popover-placement="right" popover-trigger="mouseenter" popover="Help text here">
-							  <i class="fa fa-circle fa-stack-1x"></i>
-							  <i class="fa fa-question-circle fa-stack-1x fa-inverse"></i>
-							</span>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12 col-sm-11">
-							<select class="form-control" ng-model="product.Specs.HighestQualification.Value" ng-options="option.Value as option.Value for option in product.Specs.HighestQualification.Options">
-								<option value="">Your highest qualification (required)</option>
-							</select>
-						</div>
-						<div class="col-sm-1 hidden-xs">
-							<span class="fa-stack" popover-placement="right" popover-trigger="mouseenter" popover="Help text here">
-							  <i class="fa fa-circle fa-stack-1x"></i>
-							  <i class="fa fa-question-circle fa-stack-1x fa-inverse"></i>
-							</span>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12 col-sm-11">
-							<input class="form-control" ng-maxlength="100" placeholder="Email address (required)" type="email" autocomplete="off" ng-model="product.Specs.Email.Value" ng-pattern="/^(([^<>()[\]\\.,;:\s@\']+(\.[^<>()[\]\\.,;:\s@\']+)*)|(\'.+\'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/"/>
-						</div>
-						<div class="col-sm-1 hidden-xs">
-							<span class="fa-stack" popover-placement="right" popover-trigger="mouseenter" popover="Help text here">
-							  <i class="fa fa-circle fa-stack-1x"></i>
-							  <i class="fa fa-question-circle fa-stack-1x fa-inverse"></i>
-							</span>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12 col-sm-11">
-							<input class="form-control" ng-maxlength="100" placeholder="And finally, your mobile" type="text" autocomplete="off" ng-model="product.Specs.Mobile.Value"/>
-						</div>
-						<div class="col-sm-1 hidden-xs">
-							<span class="fa-stack" popover-placement="right" popover-trigger="mouseenter" popover="Help text here">
-							  <i class="fa fa-circle fa-stack-1x"></i>
-							  <i class="fa fa-question-circle fa-stack-1x fa-inverse"></i>
-							</span>
-						</div>
-					</div>
+					<select class="form-control" ng-model="product.Specs.vPrintCopy.Value" ng-options="option.Value as option.Value for option in product.Specs.vPrintCopy.Options">
+						<option value="">{{product.Specs.vPrintCopy.Label}}</option>
+					</select>
+					<input class="form-control" ng-maxlength="100" placeholder="{{product.Specs.CurrentSchool.Label}}" type="text" autocomplete="off" ng-model="product.Specs.CurrentSchool.Value"/>
+
+					<select class="form-control" ng-model="product.Specs.HowDidYouHear.Value" ng-options="option.Value as option.Value for option in product.Specs.HowDidYouHear.Options">
+						<option value="">{{product.Specs.HowDidYouHear.Label}}</option>
+					</select>
 				</div>
 			</form>
 			<div class="btn btn-info btn-lg btn-block" ng-click="submitProspectus()"
-				 ng-disabled="!product.Specs.vFirstName.Value || !product.Specs.vLastName.Value || !product.Specs.Age.Value ||
-                                            !product.Specs.HighestQualification.Value || !product.Specs.Email.Value">
+				 ng-disabled="!product.Specs.vFirstName.Value || !product.Specs.vLastName.Value || !product.Specs.DateOfBirth.Value ||
+                                            !product.Specs.PreferredYearOfStudy.Value || !product.Specs.Email.Value">
 				Order my prospectus
 			</div>
 		</div>

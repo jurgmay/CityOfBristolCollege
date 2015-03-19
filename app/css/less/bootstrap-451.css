@@ -10022,6 +10022,9 @@ body {
   background-image: url('images/bg-main.gif');
   margin-bottom: 0;
 }
+.container-view {
+  margin-top: 0;
+}
 input:not([type="checkbox"]),
 textarea,
 select,
@@ -10099,7 +10102,9 @@ button {
   color: #fff;
   font-size: 0.8em;
 }
-.prospectus-container .form-group > .row,
+.prospectus-container input {
+  margin-bottom: 5px;
+}
 .prospectus-container .form-group > select {
   margin-bottom: 5px;
 }
