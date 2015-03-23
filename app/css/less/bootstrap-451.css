@@ -10035,6 +10035,11 @@ button {
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px;
 }
+.ng-invalid-date-of-birth {
+  border-color: #B94A48 !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  color: #B94A48;
+}
 @media (max-width: 767px) {
   .first-name-input {
     margin-bottom: 5px;
