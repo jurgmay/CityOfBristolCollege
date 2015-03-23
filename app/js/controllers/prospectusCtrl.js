@@ -34,6 +34,37 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
         Prospectus.send(variant, $scope.user);
     }
 
+    function checkDate(date) {
+        if (!date) return true;
+
+        var minYear = 1902;
+        var maxYear = (new Date()).getFullYear();
+
+        // regular expression to match required date format
+        var re = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
+
+        if(date != '') {
+            if(regs = date.match(re)) {
+                if(regs[1] < 1 || regs[1] > 31) {
+                    return false;
+                } else if(regs[2] < 1 || regs[2] > 12) {
+                    return false;
+                } else if(regs[3] < minYear || regs[3] > maxYear) {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    $scope.$watch('product.Specs.DateOfBirth.Value', function() {
+        if (!$scope.product || !$scope.product.Specs) return;
+        $scope.form_1.DateOfBirth.$setValidity('DateOfBirth', checkDate($scope.product.Specs.DateOfBirth.Value));
+    });
+
 }]);
 
 

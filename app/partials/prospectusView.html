@@ -15,24 +15,24 @@
 
 				<h2>About you</h2>
 				<div class="form-group">
-                    <select class="form-control" ng-model="product.Specs.Title.Value" ng-options="option.Value as option.Value for option in product.Specs.Title.Options">
-                        <option value="">Title (required)</option>
+                    <select class="form-control" name="Title" ng-model="product.Specs.Title.Value" ng-options="option.Value as option.Value for option in product.Specs.Title.Options">
+                        <option value="">{{product.Specs.Title.Label}}</option>
                     </select>
 					<div class="row">
 						<div class="col-sm-6">
-							<input class="form-control first-name-input" ng-maxlength="100" placeholder="Your first name (required)" type="text" autocomplete="off" ng-model="product.Specs.vFirstName.Value"/>
+							<input class="form-control first-name-input" name="FirstName" ng-maxlength="100" placeholder="{{product.Specs.vFirstName.Label}}" type="text" autocomplete="off" ng-model="product.Specs.vFirstName.Value"/>
 						</div>
 						<div class="col-sm-6">
-							<input class="form-control" ng-maxlength="100" placeholder="Your last name (required)" type="text" autocomplete="off" ng-model="product.Specs.vLastName.Value"/>
+							<input class="form-control" name="LastName" ng-maxlength="100" placeholder="{{product.Specs.vLastName.Label}}" type="text" autocomplete="off" ng-model="product.Specs.vLastName.Value"/>
 						</div>
 					</div>
-                    <input class="form-control" ng-maxlength="100" placeholder="Email address (required)" type="text" autocomplete="off" ng-model="product.Specs.Email.Value"/>
+                    <input class="form-control" name="Email" ng-maxlength="100" placeholder="{{product.Specs.Email.Label}}" type="text" autocomplete="off" ng-model="product.Specs.Email.Value"/>
                     <div class="row">
                         <div class="col-sm-6">
-                            <input class="form-control" ng-maxlength="100" placeholder="Date of Birth (required DD/MM/YYYY)" type="text" autocomplete="off" ng-model="product.Specs.DateOfBirth.Value"/>
+                            <input class="form-control" name="DateOfBirth" placeholder="{{product.Specs.DateOfBirth.Label}}" type="text" autocomplete="off" ng-model="product.Specs.DateOfBirth.Value"/>
                         </div>
                         <div class="col-sm-6">
-                            <input class="form-control" ng-maxlength="100" placeholder="{{product.Specs.Mobile.Label}}" type="text" autocomplete="off" ng-model="product.Specs.Mobile.Value"/>
+                            <input class="form-control" name="Mobile" ng-maxlength="100" placeholder="{{product.Specs.Mobile.Label}}" type="text" autocomplete="off" ng-model="product.Specs.Mobile.Value"/>
                         </div>
                     </div>
 				</div>
@@ -40,15 +40,15 @@
 
 				<h2>Where shall we send your printed prospectus?</h2>
 				<div class="form-group">
-					<input class="form-control" ng-maxlength="100" placeholder="Address 1" type="text" autocomplete="off" ng-model="product.Specs.vAdd1.Value"/>
-					<input class="form-control" ng-maxlength="100" placeholder="Address 2" type="text" autocomplete="off" ng-model="product.Specs.vAdd2.Value"/>
-					<input class="form-control" ng-maxlength="100" placeholder="Address 3" type="text" autocomplete="off" ng-model="product.Specs.vAdd3.Value"/>
+					<input class="form-control" name="Address1" ng-maxlength="100" placeholder="{{product.Specs.vAdd1.Label}}" type="text" autocomplete="off" ng-model="product.Specs.vAdd1.Value"/>
+					<input class="form-control" name="Address2" ng-maxlength="100" placeholder="{{product.Specs.vAdd2.Label}}" type="text" autocomplete="off" ng-model="product.Specs.vAdd2.Value"/>
+					<input class="form-control" name="Address3" ng-maxlength="100" placeholder="{{product.Specs.vAdd3.Label}}" type="text" autocomplete="off" ng-model="product.Specs.vAdd3.Value"/>
 					<div class="row">
 						<div class="col-sm-6">
-							<input class="form-control" ng-maxlength="100" placeholder="City" type="text" autocomplete="off" ng-model="product.Specs.City.Value"/>
+							<input class="form-control" name="City" ng-maxlength="100" placeholder="{{product.Specs.City.Label}}" type="text" autocomplete="off" ng-model="product.Specs.City.Value"/>
 						</div>
 						<div class="col-sm-3">
-							<input class="form-control" ng-maxlength="100" placeholder="Postcode" type="text" autocomplete="off" ng-model="product.Specs.vPostcode.Value"/>
+							<input class="form-control" name="PostCode" ng-maxlength="100" placeholder="{{product.Specs.vPostcode.Label}}" type="text" autocomplete="off" ng-model="product.Specs.vPostcode.Value"/>
 						</div>
 					</div>
 				</div>
@@ -56,28 +56,28 @@
 
 				<h2>Your courses</h2>
 				<div class="form-group">
-					<input class="form-control" ng-maxlength="100" placeholder="{{product.Specs.PreferredYearOfStudy.Label + ' (required)'}}" type="text" autocomplete="off" ng-model="product.Specs.PreferredYearOfStudy.Value"/>
-					<select class="form-control" ng-model="product.Specs.vCourse1.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
-						<option value="">Subject Area 1 (required)</option>
+					<input class="form-control" name="YearOfStudy" ng-maxlength="100" placeholder="{{product.Specs.PreferredYearOfStudy.Label}}" type="text" autocomplete="off" ng-model="product.Specs.PreferredYearOfStudy.Value"/>
+					<select class="form-control" name="Course1" ng-model="product.Specs.vCourse1.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
+						<option value="">{{product.Specs.vCourse1.Label}}</option>
 					</select>
-					<select class="form-control" ng-model="product.Specs.vCourse2.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
-						<option value="">Subject Area 2</option>
+					<select class="form-control" name="Course2" ng-model="product.Specs.vCourse2.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
+						<option value="">{{product.Specs.vCourse2.Label}}</option>
 					</select>
-					<select class="form-control" ng-model="product.Specs.vCourse3.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
-						<option value="">Subject Area 3</option>
+					<select class="form-control" name="Course3" ng-model="product.Specs.vCourse3.Value" ng-options="option.Value as option.Value for option in product.Specs.vCourse1.Options">
+						<option value="">{{product.Specs.vCourse3.Label}}</option>
 					</select>
-					<select class="form-control" ng-model="product.Specs.vPrintCopy.Value" ng-options="option.Value as option.Value for option in product.Specs.vPrintCopy.Options">
+					<select class="form-control" name="PrintCopy" ng-model="product.Specs.vPrintCopy.Value" ng-options="option.Value as option.Value for option in product.Specs.vPrintCopy.Options">
 						<option value="">{{product.Specs.vPrintCopy.Label + ' (required)'}}</option>
 					</select>
-					<input class="form-control" ng-maxlength="100" placeholder="{{product.Specs.CurrentSchool.Label}}" type="text" autocomplete="off" ng-model="product.Specs.CurrentSchool.Value"/>
+					<input class="form-control" name="" ng-maxlength="100" placeholder="{{product.Specs.CurrentSchool.Label}}" type="text" autocomplete="off" ng-model="product.Specs.CurrentSchool.Value"/>
 
-					<select class="form-control" ng-model="product.Specs.HowDidYouHear.Value" ng-options="option.Value as option.Value for option in product.Specs.HowDidYouHear.Options">
+					<select class="form-control" name="HowDidYouHear" ng-model="product.Specs.HowDidYouHear.Value" ng-options="option.Value as option.Value for option in product.Specs.HowDidYouHear.Options">
 						<option value="">{{product.Specs.HowDidYouHear.Label}}</option>
 					</select>
 				</div>
 			</form>
 			<div class="btn btn-success btn-lg btn-block" ng-click="submitProspectus()"
-				 ng-disabled="!product.Specs.Title.Value || !product.Specs.vFirstName.Value || !product.Specs.vLastName.Value || !product.Specs.DateOfBirth.Value ||
+				 ng-disabled="!product.Specs.Title.Value || !product.Specs.vFirstName.Value || !product.Specs.vLastName.Value || !product.Specs.DateOfBirth.Value || form_1.DateOfBirth.$invalid ||
                                             !product.Specs.PreferredYearOfStudy.Value || !product.Specs.Email.Value || !product.Specs.vPrintCopy.Value || !product.Specs.vCourse1.Value">
 				Order my prospectus
 			</div>
