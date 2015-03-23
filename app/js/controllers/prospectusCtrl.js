@@ -44,7 +44,8 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
         var re = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
 
         if(date != '') {
-            if(regs = date.match(re)) {
+            var regs = date.match(re)
+            if(regs) {
                 if(regs[1] < 1 || regs[1] > 31) {
                     return false;
                 } else if(regs[2] < 1 || regs[2] > 12) {
