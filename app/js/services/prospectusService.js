@@ -10,6 +10,7 @@ four51.app.factory('Prospectus', ['$resource', '$451', 'Order', 'AddressList', '
         var toEmail = variant.Specs['Email'].Value;
         var pdfURL = variant.ProductionURL.replace('web.four51.com','.four51.com');
         var currentYear = new Date().getFullYear();
+        var printCopy = variant.Specs['vPrintCopy'] ? variant.Specs['vPrintCopy'].Value : null;
         var template_content = [
             {
                 "name": 'firstname',
@@ -22,6 +23,10 @@ four51.app.factory('Prospectus', ['$resource', '$451', 'Order', 'AddressList', '
             {
                 "name": 'currentyear',
                 "content": currentYear
+            },
+            {
+                "name": 'PRINTCOPY',
+                "content": printCopy
             }
         ];
         var message = {
