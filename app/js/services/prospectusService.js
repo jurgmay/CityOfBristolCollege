@@ -31,7 +31,7 @@ four51.app.factory('Prospectus', ['$resource', '$451', 'Order', 'AddressList', '
         ];
         var message = {
             'subject': 'Your personalised prospectus from City of Bristol College',
-            'from_email': 'info@accent.uk.com',
+            'from_email': 'enquiries@cityofbristol.ac.uk',
             'from_name': 'City of Bristol College',
             'to': [{
                 'email': toEmail,
@@ -39,7 +39,7 @@ four51.app.factory('Prospectus', ['$resource', '$451', 'Order', 'AddressList', '
                 'type': 'to'
             }],
             'headers': {
-                'Reply-To': 'info@accent.uk.com'
+                'Reply-To': 'enquiries@cityofbristol.ac.uk'
             },
             'important': false
         };
